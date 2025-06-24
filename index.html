@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+    <header>
+        <h1>Gallery</h1>
+    </header>
+    <main>
+    <div class="container">
+        <div class="box">
+            <img src="images/1.jpg" alt="Test" id="img1" class="img" onclick="flipImage(1);"/>
+        </div>
+        <div class="box">
+            <img src="images/1.jpg" alt="Test" id="img2" class="img" onclick="flipImage(2);"/>
+        </div>
+        <div class="box">
+            <img src="images/1.jpg" alt="Test" id="img3" class="img" onclick="flipImage(3);"/>
+        </div>
+        <div class="box">
+            <img src="images/1.jpg" alt="Test" id="img4" class="img" onclick="flipImage(4);"/>
+        </div>
+        <div class="box">
+            <img src="images/1.jpg" alt="Test" id="img5" class="img" onclick="flipImage(5);"/>
+        </div>
+        <div class="box">
+            <img src="images/1.jpg" alt="Test" id="img6" class="img" onclick="flipImage(6);"/>
+        </div>
+        <div class="box">
+            <img src="images/1.jpg" alt="Test" id="img7" class="img" onclick="flipImage(7);"/>
+        </div>
+        <div class="box">
+            <img src="images/1.jpg" alt="Test" id="img8" class="img" onclick="flipImage(8);"/>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <small>Designed By Arvind Kumar</small>
+    </footer>
+    <script>
+        let x = false; //default status of flip
+        function flipImage(imgid){
+            let img = document.getElementById(`img${imgid}`);
+            x = !x;
+            img.style.transform = x ? "scaleX(-1)":"scaleX(1)";
+        }
+    </script>
+    <!-- <script>
+        let x = 0;
+        function rotateImage(imgid){
+            x += 90;
+           document.getElementById(`img${imgid}`).style.transform = `rotate(${x}deg)`;
+        }
+    </script> -->
+</body>
+</html>
